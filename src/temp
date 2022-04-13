@@ -1,0 +1,41 @@
+function App() {
+  const [data, setData] = useState();
+  const url = "https://live.staticflickr.com/";
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=recentImages&per_page=54&format=json&nojsoncallback=1`
+      )
+      .then((response) => {
+        console.log(response.data.photos.photo);
+        setData(response.data.photos.photo);
+      })
+      .catch((error) => {
+        console.log("Error fetching and parsing data", error);
+      });
+  }, []);
+
+  return (
+    <div className="App">
+      <SearchBox />
+      {data &&
+       <div className="container"> 
+        {data.map((res) => {
+          return (
+            
+
+              <li className="items">
+                <img style = {{maxWidth:'auto',
+maxHeight:250}}
+                  src={`${url}${res.server}/${res.id}_${res.secret}.jpg`}
+                  alt={`${res.title}`}
+                />
+              </li>
+        
+          );
+        })}
+        </div>}
+    </div>
+  );
+}
