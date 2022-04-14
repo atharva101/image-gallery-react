@@ -1,4 +1,4 @@
-import PhotoContainer from "../Components/PhotoContainer/photoContainer.component";
+import PhotoContainer from "../Components/PhotoContainer/PhotoContainer.component";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import apiKey from "../config";

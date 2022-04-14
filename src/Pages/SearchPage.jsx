@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState,useEffect } from "react";
 import apiKey from "../config";
-import PhotoContainer from "../Components/PhotoContainer/photoContainer.component";
+import PhotoContainer from "../Components/PhotoContainer/PhotoContainer.component";
 import SkeletonCard from "../Components/Skeleton/skeleton.component";
 import './searchPage.styles.css'
 export default function Search(props){
