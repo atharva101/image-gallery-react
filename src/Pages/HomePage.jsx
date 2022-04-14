@@ -12,7 +12,7 @@ export default function Home (props) {
           `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=recentImages&per_page=54&format=json&nojsoncallback=1`
         )
         .then((response) => {
-          //console.log(response.data.photos.photo);
+          console.log(response.data.photos.photo);
           setData(response.data.photos.photo);
         })
         .catch((error) => {

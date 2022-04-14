@@ -16,9 +16,9 @@ import Search from "./Pages/SearchPage";
 function App() {
 
 const [searchField, setSearchField] = useState(null);
- {
+ 
    /* search value state  */
- }
+ 
 
   return (
     <div className="App">

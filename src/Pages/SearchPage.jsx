@@ -23,6 +23,11 @@ export default function Search(props){
         .then((response) => {
           
          // console.log(response.data.photos.photo);
+         if(response.data.photos.photo.length === 0){
+           return(
+             <h1>No Results Found</h1>
+           )
+         } 
           setData(response.data.photos.photo)
           setisLoading(false)
         })
