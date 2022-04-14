@@ -1,0 +1,10 @@
+#photo-image{
+    height: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+#photo-image:hover{
+    transform: scale(1.1);
+    transition: transform 1s;
+}

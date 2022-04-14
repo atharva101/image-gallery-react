@@ -1,3 +1,7 @@
+.searchbox-container {
+  text-align: center;
+}
+
 input#searchbox {
   outline: none;
   height: 20px;
@@ -28,6 +32,24 @@ button#searchbox-button {
   }
 }
 
+
+@media (max-width: 1024px) {
+  input#searchbox {
+   
+    height: 15px;
+  }
+  button#searchbox-button {
+    height: 22px;
+  }
+}
+
+@media (max-width: 768px ){
+input#searchbox {
+    
+    height: 15px;
+    width: 255px;
+}
+}
 /* CSS */
 .button-18 {
   align-items: center;

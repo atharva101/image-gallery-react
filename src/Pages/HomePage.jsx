@@ -1,4 +1,4 @@
-import PhotoContainer from "../Components/PhotoContainer/PhotoContainer.component";
+import PhotoContainer from "../Components/PhotoContainer/photoContainer.component";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import apiKey from "../config";
@@ -6,7 +6,6 @@ export default function Home (props) {
 
     const [data, setData] = useState();
 
-    const url = "https://live.staticflickr.com/";
 
     useEffect(() => {
       axios
