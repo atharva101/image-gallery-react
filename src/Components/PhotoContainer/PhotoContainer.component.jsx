@@ -1,6 +1,6 @@
 import './photoContainer.styles.css'
 import  Image from '../Image/image.component'
-import { useState } from 'react'
+
 
 const PhotoContainer = ({props}) => {
 console.log(props)

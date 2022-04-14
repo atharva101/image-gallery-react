@@ -7,7 +7,7 @@ import './searchPage.styles.css'
 export default function Search(props){
 
 
-  console.log(props.searchVal)
+  //console.log(props.searchVal)
  
   const [ data, setData] = useState([])
   const [isLoading, setisLoading] = useState(false)
@@ -22,14 +22,14 @@ export default function Search(props){
         )
         .then((response) => {
           
-          console.log(response.data.photos.photo);
+         // console.log(response.data.photos.photo);
           setData(response.data.photos.photo)
           setisLoading(false)
         })
         .catch((error) => {
           console.log("Error fetching and parsing data", error);
         });
-    },15000);
+    },1000);
 
     return() => clearTimeout(timing)
     

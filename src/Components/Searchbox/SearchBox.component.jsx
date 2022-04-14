@@ -10,7 +10,7 @@ const SearchBox = (props) => {
     const { searchField, setSearchField } = useContext(SearchContext); //use of useContext hook to use searchfield value in the component
 
     function getInputValue(event){
-        console.log(inputVal)
+      //  console.log(inputVal)
         setinputVal(event.target.value)
          
     }
@@ -18,12 +18,12 @@ const SearchBox = (props) => {
     // function to get input field value on button click
     function getSearchVal(){
       if(!inputVal){
-        console.log('hello')
+      //  console.log('hello')
         window.location.href = "/"
       }
         setSearchField(inputVal)
         setinputVal('')
-        console.log(searchField);
+       // console.log(searchField);
         navigate({
           pathname : '/search',
           search: `=${inputVal}`

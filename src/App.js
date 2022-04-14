@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState } from "react";
-import axios from "axios";
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,12 +16,15 @@ import Search from "./Pages/SearchPage";
 function App() {
 
 const [searchField, setSearchField] = useState(null);
-
+ {
+   /* search value state  */
+ }
 
   return (
     <div className="App">
       <Router>
-        <SearchContext.Provider value={{ searchField, setSearchField }}>
+        <SearchContext.Provider value={{ searchField, setSearchField }}>     
+       
             <SearchBox search={searchField} />
             <Routes>
               <Route path="/" element={<Home search={searchField} />}></Route>
